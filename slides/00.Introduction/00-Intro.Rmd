@@ -3,15 +3,15 @@ title: "R Markdown学术写作教程"
 author: "梁昊"
 date: "06/03/2021"
 output:
+  beamer_presentation:
+    latex_engine: xelatex
+    theme: "AnnArbor"
   powerpoint_presentation:
     reference_doc: template.pptx
     toc: yes
     toc_depth: 1
     number_sections: no
     slide_level: 2
-  beamer_presentation:
-    latex_engine: xelatex
-    theme: "AnnArbor"
   ioslides_presentation: default
   slidy_presentation: default
 header-includes:
