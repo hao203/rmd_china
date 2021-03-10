@@ -20,7 +20,7 @@ Rmarkdown学术写作课程（医咖会）
 - ...
 2.  Rmarkdown写作的优势（相较于word、jupyter notebook）
 - all in one (即将写作和统计分析、作图融合在一起，一个程序解决所有问题)
-- 兼容markdown语法、可以运行除python以外的代码（python、javascript等）
+- 兼容markdown语法、可以运行除R以外的代码（python、SQL等）
 - 可以将文档转化成各种常见格式，便于发布和整理
 - 可以和git融合，方便版本控制，天生开源特性
 - 丰富的模板和自动化操作
