@@ -3,15 +3,15 @@ title: "R Markdown学术写作教程"
 author: "梁昊"
 date: "06/03/2021"
 output:
-  beamer_presentation:
-    latex_engine: xelatex
-    theme: "AnnArbor"
   powerpoint_presentation:
     reference_doc: template.pptx
     toc: yes
     toc_depth: 1
     number_sections: no
     slide_level: 2
+  beamer_presentation:
+    latex_engine: xelatex
+    theme: "AnnArbor"
   ioslides_presentation: default
   slidy_presentation: default
 header-includes:
@@ -66,15 +66,22 @@ library(magrittr)
 
 ## R Markdown
 
-R Markdown是利用Rstudio将文字和数据进行展示的全能选手。
+R Markdown是利用Rstudio进行科技写作的全能选手
 
-本课程专注于学术写作。
+  -   本课程专注于学术写作  
+  
+R Markdown的文档能够完全重现
 
-R Markdown documents are fully reproducible. 
+  -   R Markdown documents are fully reproducible.
+  
+可以把文本+代码优雅的输出成你需要的格式
 
-Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output.
+  -   Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output.
 
-Use multiple languages including R, Python, and SQL.
+支持多种程序语言，包括R，python，SQL等
+
+-   Use multiple languages including R, Python, and SQL.
+
 
 https://rmarkdown.rstudio.com/
 
@@ -92,24 +99,40 @@ See the [gallery](https://rmarkdown.rstudio.com/gallery.html)
 :::
 :::
 
+
+# 学这门课的价值?
+
 ## R Markdown workflow
 
-![workflow](workflow.png)
+![支持开源和学术透明、推动R Markdown中国化](workflow.png)
+
+## 事半功倍
+
+简单易学：R很简单，配合tidyverse等系列包，代码可读性强
+
+All in one （鱼与熊掌，我全都要）：一个软件全都有，数据-分析-可视化-写作-展示（类似于家装全包）
+
+一个残酷的现实：用统计的，往往不是学统计的。
+
+  -   R语言做统计分析，是它的看家本领，非常好用！
+
+R的表格和可视化，是颜值担当，高大上，无出其右！
+
+不论写论文、写书、写报告、PPT，它都是让你脱颖而出的好工具！
+
+  -   更多期刊和作者都在使用R Markdown，学习R Markdown就是拥抱未来！
+  
+——参考王敏杰[《数据科学中的 R 语言》](https://bookdown.org/wangminjie/R4DS/)
+
 
 # 这门课适合谁?
 
-## 我的初衷
 
--   支持开源，支持R的学习
-
--   推动R Markdown中国化
-
--   开拓思维、提高效率
-
-## 适合谁来学？
+## 适合谁？
 
 -   科研工作者（拯救科研狗）
-    -   理工农**医**（别笑，是真的）
+
+    -   理工农**医**
     -   社科
     -   心理
     -   商业
@@ -120,59 +143,26 @@ See the [gallery](https://rmarkdown.rstudio.com/gallery.html)
 -   数据科学
 
 
-# 学这门课的价值?
-
-## 提高效率
-
-R很简单，配合tidyverse等系列包，代码可读性强，用的是人类语言， 非常好学
-
-All in one （鱼与熊掌，我全都要）：一个软件全都有，数据-分析-可视化-写作-展示（类似于家装全包）
-
-强大的兼容性
-
-  -   所有平台都可用（win,ios,linux,云端）
-  
-  -   各种格式输出
-  
-  -   兼容python, SQL, bash、Rcpp(C++)等
-  
-
-## 立于不败
-
-
-我们不是学统计的，但需要用统计。一个更残酷的现实，用统计的，往往不是学统计的。
-
-  -   R语言做统计分析，是它的看家本领，非常好用！
-
-R的表格和可视化，是颜值担当，高大上，无出其右！
-
-不论写论文、写书、写报告、PPT，它都是让你脱颖而出的好工具！
-
-  -   更多期刊和作者都在使用R Markdown，学习R Markdown就是拥抱未来！
-
-> 参考王敏杰[《数据科学中的 R 语言》](https://bookdown.org/wangminjie/R4DS/)
-
 
 # 需要哪些基础?
 
-## 编程基础
+英语基础
 
-今年两会有代表提出取消英语主科地位，您同意吗？
+  -   有点英语基础，能看懂基本单词
+  
+编程基础
 
-  -   有点英语基础就行，看得懂基本单词
-
-具备其他编程语言基础最好，python编程基础，上手R最容易。这个就是加强版的jupyter notebook！
-
-没有编程基础，no关系，这门课你也能听懂
-
-## 统计学基础
-
-确实要懂点……
+  -   Python或R编程基础最佳，没有编程基础，也可。
+  -   R markdown 与Jupyter notebook是亲兄弟
+  
+统计学基础
 
   -   懂基本的统计学原理，和统计学方法的适用对象
-  -   No 公式！
-  -   懂统计图
-  -   会spss就行
+  -   会看统计图表
+  -   会点SPSS就OK
+
+本科程没有复杂的`公式`！
+
 
 # Examples
 
