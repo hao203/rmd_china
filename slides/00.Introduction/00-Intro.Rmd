@@ -3,15 +3,17 @@ title: "R Markdown学术写作教程"
 author: "梁昊"
 date: "06/03/2021"
 output:
+  beamer_presentation:
+    latex_engine: xelatex
+    theme: "AnnArbor"
+    toc: yes
+    slide_level: 2
   powerpoint_presentation:
     reference_doc: template.pptx
     toc: yes
     toc_depth: 1
     number_sections: no
     slide_level: 2
-  beamer_presentation:
-    latex_engine: xelatex
-    theme: "AnnArbor"
   ioslides_presentation: default
   slidy_presentation: default
 header-includes:
@@ -28,7 +30,7 @@ library(magrittr)
 ## 基本情况
 ::: {.columns}
 ::: {.column width="40%"}
-![个人头像](avatar.jpg)
+![个人头像](images/avatar.jpg)
 :::
 
 ::: {.column width="60%"}
@@ -89,7 +91,7 @@ https://rmarkdown.rstudio.com/
 
 ::: {.columns}
 ::: {.column}
-![output](outputformats.png)
+![output](images/outputformats.png)
 :::
 
 ::: {.column}
@@ -104,7 +106,7 @@ See the [gallery](https://rmarkdown.rstudio.com/gallery.html)
 
 ## R Markdown workflow
 
-![支持开源和学术透明、推动R Markdown中国化](workflow.png)
+![支持开源和学术透明、推动R Markdown中国化](images/workflow.png)
 
 ## 事半功倍
 
@@ -202,7 +204,7 @@ plt.show()
 
 ## 课后作业
 
-尝试用你自己的ppt模板生成pptx
+尝试用我提供的ppt模板(template.pptx)生成pptx，可以替换头像，修改名字
 
 参考：[Rendering PowerPoint Presentations with RStudio](https://support.rstudio.com/hc/en-us/articles/360004672913-Rendering-PowerPoint-presentations-with-RStudio)
 
