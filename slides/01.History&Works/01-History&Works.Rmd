@@ -1,0 +1,89 @@
+---
+title: "01-R Markdown历史和工作原理"
+author: "梁昊"
+date: "02/04/2021"
+output:
+  beamer_presentation:
+    latex_engine: xelatex
+    theme: "AnnArbor"
+    toc: yes
+    slide_level: 2
+    number_sections: yes
+    highlight: tango
+  powerpoint_presentation:
+    
+    reference_doc: ../00.Introduction/template.pptx
+    toc: yes
+    toc_depth: 1
+    number_sections: no
+    slide_level: 2
+header-includes:
+  - \usepackage{ctex}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# R Markdown 的历史
+
+## 时间节点
+
+R Markdown始于2012年，配合`knitr` package进行格式转化
+
+-   但那时候功能非常有限，尤其表格、数学公式、引用等都不完善
+
+2014年`rmarkdown` package 诞生了
+
+经过6年多的发展，R Markdown已经形成完整生态，功能越发强大
+
+  -   [Demo](https://rstudio.com/resources/rstudioconf-2020/one-r-markdown-document-fourteen-demos/)
+  -   [gallery](https://rmarkdown.rstudio.com/gallery.html)
+
+## R Markdown 关键人物
+
+::: {.columns}
+::: {.column width="40%"}
+![[Yihui Xie 谢益辉](https://cosx.org/2016/01/interview-of-xieyihui/)](images/xie.png)
+
+:::
+
+::: {.column width="30%"}
+![[Hadley Wickham](http://hadley.nz/)](images/HadleyWickham.jpg)
+:::
+:::
+
+# R Markdown的工作原理
+
+## R Markdown站在巨人的肩膀上
+
+R Markdown 主要依赖两个包来运行和输出（knitr and Pandoc）
+
+安装`rmarkdown`以后，会自动集成knitr 和 Pandoc
+
+![workflow](images/rmd_flow.png)
+
+## R Markdown基础包安装
+
+
+pdf格式的输出需要tinytex，这个包同样是谢益辉在维护。
+
+TeX Live、Ctex等TeX工具包的安装是繁重而痛苦的。
+
+**tinytex告别了繁琐的安装**
+
+```{r installpackage, eval=FALSE, echo=TRUE, warning=FALSE}
+install.packages('rmarkdown')
+install.packages('tinytex')
+tinytex::install_tinytex()  # install TinyTeX
+
+```
+
+## 
+
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```

@@ -1,18 +1,18 @@
 ---
-title: "R Markdown学术写作教程"
+title: "R Markdown学术写作教程-00"
 author: "梁昊"
 date: "06/03/2021"
 output:
-  beamer_presentation:
-    latex_engine: xelatex
-    theme: "AnnArbor"
-    toc: yes
-    slide_level: 2
   powerpoint_presentation:
     reference_doc: template.pptx
     toc: yes
     toc_depth: 1
     number_sections: no
+    slide_level: 2
+  beamer_presentation:
+    latex_engine: xelatex
+    theme: "AnnArbor"
+    toc: yes
     slide_level: 2
   ioslides_presentation: default
   slidy_presentation: default
@@ -28,6 +28,7 @@ library(magrittr)
 # 个人介绍
 
 ## 基本情况
+
 ::: {.columns}
 ::: {.column width="40%"}
 ![个人头像](images/avatar.jpg)
