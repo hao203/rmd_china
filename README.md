@@ -29,30 +29,33 @@ Rmarkdown学术写作课程（医咖会）
 
 #### 第一章 准备工作与理论
 
-1.  Rmarkdown是什么（生态、作者、历史），可以做什么
-- 写论文
-- 写书
-- 写毕业论文
-- 写学术墙报
-- 写简历
-- ...
+1.  Rmarkdown是什么（生态、作者、历史）
 2.  Rmarkdown写作的优势（相较于word、jupyter notebook）
 - all in one (即将写作和统计分析、作图融合在一起，一个程序解决所有问题)
 - 兼容markdown语法、可以运行除R以外的代码（python、SQL等）
 - 可以将文档转化成各种常见格式，便于发布和整理
 - 可以和git融合，方便版本控制，天生开源特性
 - 丰富的模板和自动化操作
-3.  Rstudio的安装、设置和包管理
+3.  Rmarkdown的工作原理及结构
+- `rmarkdown`包依赖knitr 和 Pandoc进行文件输出和转化
+- Rmd文件结构（yaml、text（markdown、latex、html）、code chunk）
+1. 可以做什么
+- 写论文
+- 写书
+- 写毕业论文
+- 写学术墙报
+- 写简历
+- ... 
+5.  Rstudio的安装、设置和包管理
 - Rstudio的安装及注意事项
 - Rstudio的设置
 - 包管理（内置方法、devtools、remotes、pacman）
-4.  Rmarkdown需要安装的包
+6.  Rmarkdown需要安装的包
 - tinytex
 - rticles
 - tidyverse
 - bookdown
-5.  Rmarkdown的结构及工作原理
-- Rmd文件结构（yaml、text（markdown、latex）、chunk option、code chunk）
+
 
 #### 第二章 基础操作与参数讲解
 
