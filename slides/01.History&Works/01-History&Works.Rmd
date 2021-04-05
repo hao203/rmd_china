@@ -3,6 +3,12 @@ title: "01-R Markdown历史和工作原理"
 author: "梁昊"
 date: "02/04/2021"
 output:
+  powerpoint_presentation:
+    reference_doc: ../00.Introduction/template.pptx
+    toc: yes
+    toc_depth: 1
+    number_sections: false
+    slide_level: 2
   beamer_presentation:
     latex_engine: xelatex
     theme: "AnnArbor"
@@ -10,13 +16,6 @@ output:
     slide_level: 2
     number_sections: yes
     highlight: tango
-  powerpoint_presentation:
-    
-    reference_doc: ../00.Introduction/template.pptx
-    toc: yes
-    toc_depth: 1
-    number_sections: no
-    slide_level: 2
 header-includes:
   - \usepackage{ctex}
 ---
@@ -65,10 +64,11 @@ R Markdown 主要依赖两个包来运行和输出（knitr and Pandoc）
 
 ## R Markdown基础包安装
 
+html和pdf是R Markdown输出最基础的格式，html相对简单
 
-pdf格式的输出需要tinytex，这个包同样是谢益辉在维护。
+pdf格式的输出需要tinytex，这个包同样是谢益辉在维护
 
-TeX Live、Ctex等TeX工具包的安装是繁重而痛苦的。
+TeX Live、Ctex等TeX工具包的安装是繁重而痛苦的
 
 **tinytex告别了繁琐的安装**
 
@@ -79,7 +79,7 @@ tinytex::install_tinytex()  # install TinyTeX
 
 ```
 
-## 
+## R Markdown::render
 
 
 ## Slide with Plot
