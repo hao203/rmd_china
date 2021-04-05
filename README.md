@@ -1,10 +1,10 @@
-# R markdown学术写作
+# R Markdown学术写作教程
 
-## 为什么要学R markdown? 我给你10个理由
+## 为什么要学R Markdown? 我给你10个理由
 
 Rmarkdown学术写作的优势一句话：all in one。
 
-1个Rstudio可以把学术写作的所有要素全部集中，不需要额外的软件。一个R markdown文件，一个完整的workflow，完全复现你写作中的方方面面。从数据清洗、分析、写作、发表一条龙服务。
+1个Rstudio可以把学术写作的所有要素全部集中，不需要额外的软件。一个R Markdown文件，一个完整的workflow，完全复现你写作中的方方面面。从数据清洗、分析、写作、发表一条龙服务。
 
 1.	支持markdown语法，可以分享在任何支持markdown语法的博客和Github上。Markdown基本语法5分钟左右即可掌握，不会出现乱七八糟的格式，避免了word各种繁琐的格式调整。
 2.	所有的数据分析都可以在写作中，边写边呈现结果。可以随意定制，如是否显示输出结果、是否显示图片，是否显示代码。随意控制输出的样式，如图片大小、坐标样式。臃肿的SAS、SPSS、Stata几乎都可以抛弃（Rstudio具备优秀的数据分析和可视化包）。
@@ -19,27 +19,38 @@ Rmarkdown学术写作的优势一句话：all in one。
 
 
 ### 介绍
-Rmarkdown学术写作课程（医咖会）
+R Markdown学术写作课程（医咖会），该课的主要目的是为提高基于R的科学研究便捷性、高效性、可重复性。同时也是推广R Markdown的中国化。
 
 ### 适用人群
 科研工作者、研究生、数据科学从业者等
+
+### 术语及文档规范
+
+-   R语言 - 使用大写字母R
+-   R Markdown - 官方称为R Markdown （同义词Rmarkdown、R markdown等）
+-   rmarkdown - 这个是R Markdown 的包名称，即需要安装rmarkdown package才能进行下一步的操作
+-   .Rmd - R Markdown文件扩展名，首字母大写
+-   R包的名字 - 全部使用小写
+-   .Rmd代码块和命令行全部为小写字母 - 布尔值除外（TRUE,FALSE）
+-   .Rmd代码块符号前后必须有空格 - 如 a <- 2 , b = 3 .
 
 
 ### 课程大纲
 
 #### 第一章 准备工作与理论
 
-1.  Rmarkdown是什么（生态、作者、历史）
-2.  Rmarkdown写作的优势（相较于word、jupyter notebook）
+1.  R Markdown是什么（生态、作者、历史）
+2.  R Markdown写作的优势（相较于word、jupyter notebook）
 - all in one (即将写作和统计分析、作图融合在一起，一个程序解决所有问题)
 - 兼容markdown语法、可以运行除R以外的代码（python、SQL等）
-- 可以将文档转化成各种常见格式，便于发布和整理
+- 可以将文档转化成常见格式，便于发布和整理
 - 可以和git融合，方便版本控制，天生开源特性
 - 丰富的模板和自动化操作
-3.  Rmarkdown的工作原理及结构
+- **可复现/可重复性（Reproducible）是学术研究的命脉**
+3.  R Markdown的工作原理及结构
 - `rmarkdown`包依赖knitr 和 Pandoc进行文件输出和转化
 - Rmd文件结构（yaml、text（markdown、latex、html）、code chunk）
-1. 可以做什么
+4.  可以做什么
 - 写论文
 - 写书
 - 写毕业论文
@@ -50,7 +61,7 @@ Rmarkdown学术写作课程（医咖会）
 - Rstudio的安装及注意事项
 - Rstudio的设置
 - 包管理（内置方法、devtools、remotes、pacman）
-6.  Rmarkdown需要安装的包
+6.  R Markdown需要安装的包
 - tinytex
 - rticles
 - tidyverse

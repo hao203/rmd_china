@@ -7,17 +7,19 @@ output:
     reference_doc: ../00.Introduction/template.pptx
     toc: yes
     toc_depth: 1
-    number_sections: false
+    number_sections: no
     slide_level: 2
   beamer_presentation:
     latex_engine: xelatex
-    theme: "AnnArbor"
+    theme: AnnArbor
     toc: yes
     slide_level: 2
     number_sections: yes
     highlight: tango
-header-includes:
-  - \usepackage{ctex}
+  pdf_document: default
+  slidy_presentation:
+    highlight: tango
+header-includes: \usepackage{ctex}
 ---
 
 ```{r setup, include=FALSE}
@@ -56,34 +58,118 @@ R Markdown始于2012年，配合`knitr` package进行格式转化
 
 ## R Markdown站在巨人的肩膀上
 
+::: {.columns}
+::: {.column width="40%"}
+![[R Markdown Workflow](https://#)](images/rmd_flow.png)
+
+:::
+
+::: {.column width="30%"}
 R Markdown 主要依赖两个包来运行和输出（knitr and Pandoc）
+
+  -   R Markdown stands on the shoulders of knitr and Pandoc.
 
 安装`rmarkdown`以后，会自动集成knitr 和 Pandoc
 
-![workflow](images/rmd_flow.png)
+
+:::
+:::
+
 
 ## R Markdown基础包安装
 
 html和pdf是R Markdown输出最基础的格式，html相对简单
 
-pdf格式的输出需要tinytex，这个包同样是谢益辉在维护
-
-TeX Live、Ctex等TeX工具包的安装是繁重而痛苦的
+pdf格式的输出需要TeX，TeX Live、MiKTeX等(~5Gb大小)TeX工具包的安装是繁重而[痛苦](https://yihui.org/tinytex/pain/)
 
 **tinytex告别了繁琐的安装**
 
-```{r installpackage, eval=FALSE, echo=TRUE, warning=FALSE}
+```{r install, eval=FALSE, echo=TRUE, warning=FALSE}
 install.packages('rmarkdown')
 install.packages('tinytex')
+tinytex::tlmgr_repo('https://mirrors.tuna.tsinghua.edu.cn/CTAN/') #国内镜像
 tinytex::install_tinytex()  # install TinyTeX
+tinytex::is_tinytex() # 安装成功返回TURE，必须检测
 
 ```
 
-## R Markdown::render
+## 点击knit按钮时发生了什么-1
+
+![[Rmd文档点击knit按钮时](http://#)](images/knit_rm.png)
+
+## 点击knit按钮时发生了什么-2
+
+![[点击按钮时执行了rmarkdown::render()命令，pdf生成需要TeX](http://#)](images/htmlvpdf.png)
 
 
-## Slide with Plot
 
-```{r pressure}
-plot(pressure)
+# R Markdown 文档的结构
+
+## R Markdown主要由三个部分组成
+
+![[来源:https://alexd106.github.io/intro2R/Rmarkdown_intro.html](https://alexd106.github.io/intro2R/Rmarkdown_intro.html)](images/rm_anatomy.png)
+
+# R Markdown学术应用场景
+
+## 主要应用场景及对应的R包
+
+
+  -     写论文 - rmarkdown/rticles/pagedown
+  -     写书 - bookdown
+  -     写毕业论文 - thesisdown
+  -     写学术墙报 - posterdown
+  -     写简历 - vitae
+  -     学术网站 ... - blogdown/distill ...
+
+# Rstudio的安装、设置和包管理
+
+## Rstudio的安装和设置
+
+本教程Rstudio版本必须为1.4，R的版本必须为4.0+，建议都安装最新版本
+
+建议安装时，错误提示等均选择英文，不安装中文提示包
+
+Rstudio CRAN镜像选为国内，速度快
+
+Rstudio Python引擎设定
+
+Rstudio pdf 输出引擎设定
+
+## 包管理和需要安装的包
+
+关于包管理，建议采用命令行
+
+  -   详见我的[R包管理终极教程](https://www.jianshu.com/p/0733946efae9)
+  
+必须要安装的包(之前已安装了rmarkdown和tinytex)：
+  
+```{r installpackages, echo=TRUE, eval=FALSE, warning=FALSE}
+install.packages(c("tidyverse", "pacman", "rticles", "pagedown", "bookdown", "reticulate", "kableExtra") )
+
 ```
+
+## 加载包（library）
+
+library为默认加载命令，只能加载一个包
+
+pacman安装好以后，可以一次加载多个包，强烈推荐
+
+关于"::"，该命令为在需要用某个函数时临时直接加载包，不用事先library，这样可以减轻系统负担。比如`pacman::p_load`命令就是在未加载pacman这个包时，使用了其p_load命令。
+
+```{r librarypackages, echo=TRUE, eval=FALSE, warning=FALSE}
+library(tidyverse)
+library(reticulate)
+library(kableExtra)
+# OR
+pacman::p_load(tidyverse, reticulate, kableExtra) # 如果其中有包未安装，则该条命令会安装并加载它
+
+```
+
+# 课后作业
+
+## 课后作业
+
+安装好rmarkdown和tinytex包
+
+  -   新建一个R Markdown notebook文档，只输入英文
+  -   分别生成html和pdf文件
