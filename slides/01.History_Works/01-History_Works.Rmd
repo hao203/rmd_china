@@ -2,25 +2,24 @@
 title: "01-R Markdown历史和工作原理"
 author: "梁昊"
 date: "02/04/2021"
-
 output:
-  beamer_presentation:
-    theme: AnnArbor
+  beamer_presentation: 
+    theme: CambridgeUS
     toc: yes
     slide_level: 2
     number_sections: yes
     highlight: tango
-
+    pandoc_args: --listings
+    latex_engine: xelatex
+  pdf_document: 
+    latex_engine: xelatex
+    pandoc_args: --listings
   powerpoint_presentation:
     reference_doc: ../00.Introduction/template.pptx
     toc: yes
     toc_depth: 1
     number_sections: no
     slide_level: 2
-  pdf_document: default
-  slidy_presentation:
-    highlight: tango
-    
 header-includes:
   - \usepackage{ctex}
   - \lstset{breaklines=true}
@@ -118,12 +117,12 @@ tinytex::is_tinytex() # 安装成功返回TURE，必须检测
 ## 主要应用场景及对应的R包
 
 
-  -     写论文 - rmarkdown/rticles/pagedown
-  -     写书 - bookdown
-  -     写毕业论文 - thesisdown
-  -     写学术墙报 - posterdown
-  -     写简历 - vitae
-  -     学术网站 ... - blogdown/distill ...
+  -     写论文 ~ rmarkdown/rticles/pagedown
+  -     写书 ~ bookdown
+  -     写毕业论文 ~ thesisdown
+  -     写学术墙报 ~ posterdown
+  -     写简历 ~ vitae
+  -     学术网站 ... ~ blogdown/distill ...
 
 # Rstudio的安装、设置和包管理
 
