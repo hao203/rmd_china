@@ -99,7 +99,8 @@ R Markdown学术写作课程（医咖会），该课的主要目的是为提高�
 
 
 #### 第三章 实战学术写作
-1.实战
+
+1. 实战
    - 写一个完整的manuscript
    - 关于rticles包
    - 写一个post（postdown包）
