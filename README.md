@@ -27,6 +27,7 @@ R Markdown学术写作课程（医咖会），该课的主要目的是为提高�
 ### 术语及文档规范
 
 -   R语言 - 使用大写字母R
+-   Rstudio和R程序均为英文界面和英文提示报错
 -   R Markdown - 官方称为R Markdown （同义词Rmarkdown、R markdown等）
 -   rmarkdown - 这个是R Markdown 的包名称，即需要安装rmarkdown package才能进行下一步的操作
 -   .Rmd - R Markdown文件扩展名，首字母大写
@@ -70,10 +71,12 @@ R Markdown学术写作课程（医咖会），该课的主要目的是为提高�
 
 #### 第二章 基础操作与参数讲解
 
-1.  yaml头部及参数
-- yaml this包快速设置
-- yaml语法注意事项
+1.  YAML头部及参数
+
+- YAML语法注意事项
 - 常见参数设置title|author|output|toc|template|reference等
+- ymlthis包快速设置
+  
 2.  markdown语法速成（10分钟）
 3.  chunk（代码块）
 - 插入代码块（R和python演示）
@@ -82,7 +85,7 @@ R Markdown学术写作课程（医咖会），该课的主要目的是为提高�
 - 表格使用的包（flextable、kable）
 - 和我一起Table one
 5.  图片
-- chunk文档内生成图片
+- chunk生成图片
 - 外部图片
 6. 引用
 - csl及引文样式

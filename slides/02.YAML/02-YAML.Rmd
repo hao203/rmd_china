@@ -158,7 +158,7 @@ install.packages('ymlthis')
 
 ## ymlthis addin设置YAMLheader
 
-![使用ymlthis插件](images/ymlthis_use.png)
+![ymlthis插件设定](images/ymlthis_use.png)
 
 # 课后作业
 
