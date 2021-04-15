@@ -1,0 +1,80 @@
+---
+title: "04.图片和表格"
+author: "梁昊"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  powerpoint_presentation:
+    reference_doc: ../00.Introduction/template.pptx
+    toc: yes
+    toc_depth: 1
+    number_sections: no
+    slide_level: 2
+  pdf_document:
+    latex_engine: xelatex
+    pandoc_args: --listings
+  beamer_presentation: 
+    theme: CambridgeUS
+    toc: yes
+    slide_level: 2
+    number_sections: yes
+    pandoc_args: --listings
+    latex_engine: xelatex
+    colortheme: seahorse
+header-includes:
+- \usepackage{ctex}
+- \lstset{breaklines=true}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+# 图片（Figures）
+
+## 外部图片
+
+我们可以直接用Markdown语法
+
+````md
+![A nice image.](images/flow.png){width=50%}
+````
+
+
+还可以用Chunk
+
+````md
+
+```{r, echo=FALSE, out.width="50%", fig.cap="A nice image."} `r ''`
+knitr::include_graphics("images/flow.png")
+```
+
+````
+
+```{r}
+toprint
+```
+
+
+## stargazer
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## texreg
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## tableone
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## gtsummary
+
+```{r pressure}
+plot(pressure)
+```
+

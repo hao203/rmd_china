@@ -3,15 +3,6 @@ title: "03.Markdown语法和Chunk"
 author: "梁昊"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  powerpoint_presentation:
-    reference_doc: ../00.Introduction/template.pptx
-    toc: yes
-    toc_depth: 1
-    number_sections: no
-    slide_level: 2
-  pdf_document:
-    latex_engine: xelatex
-    pandoc_args: --listings
   beamer_presentation: 
     theme: CambridgeUS
     toc: yes
@@ -20,10 +11,18 @@ output:
     pandoc_args: --listings
     latex_engine: xelatex
     colortheme: seahorse
+  pdf_document:
+    latex_engine: xelatex
+    pandoc_args: --listings
+  powerpoint_presentation:
+    reference_doc: ../00.Introduction/template.pptx
+    toc: yes
+    toc_depth: 1
+    number_sections: no
+    slide_level: 2
 header-includes:
 - \usepackage{ctex}
 - \lstset{breaklines=true}
-
 ---
 
 ```{r setup, include=FALSE}
@@ -63,7 +62,7 @@ Markdown非常容易上手，几分钟就可完成学习。排版精美，尤其
 
 ## Markdown语法参考文档
 
-![Rstudio自带的Markdown参考文档](images/md_help.png)
+![Rstudio自带的Markdown参考文档](images/md_help.png){width=80%}
 
 # 代码块（Code Chunks）
 
