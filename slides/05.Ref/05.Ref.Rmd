@@ -1,0 +1,93 @@
+---
+title: "05.参考文献和引用"
+author: "梁昊"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  powerpoint_presentation:
+    reference_doc: ../00.Introduction/template.pptx
+    toc: yes
+    toc_depth: 1
+    number_sections: no
+    slide_level: 2
+  beamer_presentation:
+    theme: CambridgeUS
+    toc: yes
+    slide_level: 2
+    number_sections: yes
+    pandoc_args: --listings
+    latex_engine: xelatex
+    colortheme: seahorse
+  pdf_document:
+    latex_engine: xelatex
+    pandoc_args: --listings
+bibliography: ref.bib
+csl: nature.csl
+header-includes:
+- \usepackage{ctex}
+- \lstset{breaklines=true}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+```
+# 参考文献
+
+## 基本设定
+
+参考文献是学术写作必备的模块
+
+任何参考文献管理工具，操作流程都是四个步骤
+
+  -   **建库-导入文献-插入文献-设定style**
+  
+YAML header首先要设定好库和style
+
+```yaml
+bibliography: ref.bib #设定库
+csl: nature.csl #设定style
+
+```
+
+## .bib文件
+
+.bib是用来存储文献的标准库文件，依照LaTeX格式（BibTeX）存储了文献的信息，如
+
+```bibtex
+@Book{ggplot2,
+    author = {Hadley Wickham},
+    title = {ggplot2: Elegant Graphics for Data Analysis},
+    publisher = {Springer-Verlag New York},
+    year = {2016},
+    isbn = {978-3-319-24277-4},
+    url = {http://ggplot2.org},
+  }
+
+```
+
+几乎所有的学术期刊和学术搜索引擎（谷歌学术/百度学术）都支持.bib
+
+## 如何管理.bib
+
+很显然，直接查看.bib文件是很不明智的，需要有文献管理软件来对.bib进行管理
+
+主流的参考文献管理软件都支持.bib
+
+-   **Zotero**
+-   **Jabref**
+-   Paperpile
+-   Mendeley
+-   EndNote
+
+我更加推崇`Zotero`和`Jabref`，开源、免费，支持多平台
+
+# 课后作业
+
+## 课后作业
+
+新建一个R Markdown文档
+
+-   创建一个代码块，并输入plot(cars)
+-   给该图加入caption（题注）
+-   读取数据baseline.csv，并转化成character
+-   选取AgeGroup,Gender,Venous-differentiation,Event字段，并通过gtsummary输出表格
