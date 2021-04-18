@@ -171,7 +171,7 @@ data.frame(
 如果你的Rmd文档代码Chunk设定都基本一致，那可以在文档开头设定一个默认，后面的Chunks都会依照该设定
 
 
-````
+````md
 ```{r default, include=FALSE} `r ''`
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,

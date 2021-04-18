@@ -1,0 +1,168 @@
+---
+title: "06.技巧和建议"
+author: "梁昊"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  powerpoint_presentation:
+    reference_doc: ../00.Introduction/template.pptx
+    toc: yes
+    toc_depth: 1
+    number_sections: no
+    slide_level: 2
+  beamer_presentation:
+    theme: CambridgeUS
+    toc: yes
+    slide_level: 2
+    number_sections: yes
+    latex_engine: xelatex
+    colortheme: seahorse
+  bookdown::pdf_document2: default
+  pdf_document: default
+indent: yes
+header-includes:
+- \usepackage{ctex}
+- \usepackage{lineno}
+- \linenumbers
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+```
+
+# 模板和样式
+
+## 模板
+
+所有的输出样式都可以有模板，本课程所有的ppt也都是通过医咖会模板自动生成
+
+模板只需在YAML header设置即可
+
+```yaml
+output:
+  word_document:
+    reference_docx: docx_template.docx
+  pdf_document:
+    template: pdf_ms.tex
+  powerpoint_presentation:
+    reference_doc:template.pptx
+```
+
+https://github.com/svmiller/svm-r-markdown-templates，
+
+大家也可以在github搜索更多模板。同时实战中也会有rticles包帮助生成杂志的样式。
+
+## 一些样式设定
+
+分页，相当于word当中的插入下一页
+
+  -   `\newpage`
+
+首行缩进（只对pdf有用），字体大小，链接颜色。YAML设置
+
+```yaml
+output: pdf_document
+indent: true
+urlcolor: black
+linkcolor: black
+fontsize: 12pt
+
+```
+
+
+# pdf中文支持
+
+## tinytex转化pdf
+
+安装tinytex。建议在上午安装会更快。
+  -   更多设置：https://www.jianshu.com/p/ea3fdd2b9c23
+
+```r
+install.packages('tinytex')
+tinytex::install_tinytex()
+```
+  -   YAML设置中文支持
+```yaml
+header-includes:
+  - \usepackage{ctex}
+# 或者
+documentclass: ctexart
+```
+## pagedown转化
+
+使用pagedown包，结合浏览器就可以将html转化为pdf
+```{r echo=TRUE, eval=FALSE}
+install.packages("pagedown")
+library(pagedown)
+```
+
+YAML设置，pagedown转化为html分页模式
+
+```yaml
+output:
+  pagedown::html_paged: default
+```
+
+然后通过网页打开生成html并转化成pdf
+
+参考：https://github.com/rstudio/pagedown
+
+# 文档拆分与合并
+
+## Chunk child拆分
+
+如果你写的文章很长，或者你写的书，肯定是要分章节的
+
+可以采用Chunk设定要合并的.Rmd文件
+
+如
+
+````md
+```{r child = 'Chapter_1.Rmd'} `r ''`
+```
+```{r child = 'Chapter_2.Rmd'} `r ''`
+```
+````
+
+```{r child = 'Chapter_1.Rmd'} 
+```
+
+## bookdown 新建图书
+
+New Project -> New Directory -> Book Project using bookdown
+
+bookdown的文件目录
+
+```markdown
+directory/
+├──  index.Rmd
+├── Chapter_1.Rmd
+├── Chapter_2.Rmd
+├── _bookdown.yml
+├── _output.yml
+├──  README.md
+└──  style.css
+```
+## bookdown合并章节设定
+
+YAML header 只出现在index.Rmd，其他Rmd文件不能写入YAML
+
+默认情况下，bookdown会按文件顺序依次合并.Rmd文件
+
+但如果你想按自己的文档顺序来合并可以设置_bookdown.yml这个文件
+
+```yaml
+rmd_files: ["index.Rmd", "Chapter_2.Rmd", "Chapter_1.Rmd"]
+```
+这样就把Chapter_2.Rmd放到了Chapter_1.Rmd之前
+
+# 课后作业
+
+## 课后作业
+
+新建一个bookdown文档
+
+-   删除除index.Rmd外的所有Rmd文件
+-   新建Section_1.Rmd和Section_2.Rmd，并输入简单文字，设置一级标题
+-   _bookdown.yml设定，Section_2.Rmd在Section_1.Rmd之前
+-   输出为html图书
