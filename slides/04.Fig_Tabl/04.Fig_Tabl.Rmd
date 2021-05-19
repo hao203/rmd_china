@@ -29,7 +29,7 @@ header-includes:
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(tidyverse)
 ```
-# 图片（Figures）
+# 图片(Figures)
 
 ## 外部图片
 
@@ -50,7 +50,7 @@ knitr::include_graphics("images/flow.png")
 
 ````
 
-## 统计分析图（plot）
+## 统计分析图(plot)
 
 ```{r cars-plot,out.width="70%", fig.dim=c(10, 4), fig.cap="cars scatter plot"}
 plot(cars)
@@ -64,7 +64,7 @@ plot(cars)
 
 更多设置：https://yihui.org/knitr/options/#plots
 
-# 表格（Table）
+# 表格(Table)
 
 ## Rmd表格简介
 
@@ -72,9 +72,9 @@ R Markdown的表格输出非常强大，可以根据需求使用不同的包实�
 
 常见应用：
 
-  -   输出Table One（baseline）基线数据
-  -   输出数据的基本特征（Descriptive Statistics ）
-  -   回归数据的结果（OR,95%CI等）
+  -   输出Table One(baseline)基线数据
+  -   输出数据的基本特征(Descriptive Statistics )
+  -   回归数据的结果(OR,95%CI等)
   -   表格中还可以加入多种曲线
 
 ![kableExtra输出的表格](images/tabl_eg.png){width=80%}
@@ -112,9 +112,9 @@ data.frame(
   knitr::kable(caption = "表格R包汇总")
 ```
 
-# 管道操作（ %>% ）
+# 管道操作( %>% )
 
-## 常规代码的反人类设计
+## 一个函数思路
 
 常规的代码，是如何书写函数的？
 
@@ -126,7 +126,7 @@ data.frame(
 
 参考：http://blog.fens.me/r-magrittr/
 
-## 源代码展示
+## 常规代码的反人类设计
 
 ```{r echo=TRUE, eval=FALSE}
 #方案一：创建额外的辅助变量实现
@@ -145,7 +145,7 @@ hist(round(rowMeans(matrix(abs(rnorm(10000))*50,ncol=100)))%%7)
 
 ## magrittr %>% 
 
-管道操作（pipe）是R特有的函数表达方式
+管道操作(pipe)是R特有的函数表达方式
 
 管道操作 %>% 依赖magrittr，快捷键“Ctrl+Shift+M”
 
@@ -163,13 +163,13 @@ hist(round(rowMeans(matrix(abs(rnorm(10000))*50,ncol=100)))%%7)
 
 ## 自动化Table 1
 
-Table 1 是医学领域最常见的表格
+Table 1 (基线表)是医学领域最常见的表格
 
-其他领域，Descriptive Statistics和回归结果也颇为常见
+描述统计(Descriptive Statistics)和回归结果也颇为常见
 
-gtsummary是Table 1 的首选
+gtsummary包是Table 1 的首选
 
-gtsummary支持kableExtra和flextable，flextable支持度最好
+gtsummary包支持多个表格包，对flextable包支持度最好
 
 ```{r echo=TRUE}
 # 加载必要的包
@@ -202,6 +202,6 @@ tbl_summary(
 新建一个R Markdown文档
 
 -   创建一个代码块，并输入plot(cars)
--   给该图加入caption（题注）
+-   给该图加入caption(题注)
 -   读取数据baseline.csv，并转化成character
 -   选取AgeGroup,Gender,Venous-differentiation,Event字段，并通过gtsummary输出表格

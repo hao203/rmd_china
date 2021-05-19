@@ -61,9 +61,9 @@ library(magrittr)
     -   湘雅医学期刊社青年编委
     -   《湖南中医药大学学报》编委
 
--   主持国家级课题1项、省部级课题2项、厅级课题2项；以第一作者及通讯作者发表论文20余篇，其中SCI 4篇，CSCD 10篇，总被引200余次。
+-   主持国家级课题1项、省部级课题2项、厅级课题2项；以第一作者及通讯作者发表论文20余篇，其中SCI 4篇，CSCD 10篇，总被引200余次
 
--   获省级教学成果奖1项，湖南省中医药科技一等奖2项。
+-   获省级教学成果奖1项，湖南省中医药科技一等奖2项
 
 # R Markdown是什么?
 
@@ -75,15 +75,15 @@ R Markdown是利用Rstudio进行科技写作的全能选手
   
 R Markdown的文档能够完全重现
 
-  -   R Markdown documents are fully reproducible.
+  -   R Markdown documents are fully reproducible
   
 可以把文本+代码优雅的输出成你需要的格式
 
-  -   Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output.
+  -   Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output
 
 支持多种程序语言，包括R，python，SQL等
 
--   Use multiple languages including R, Python, and SQL.
+-   Use multiple languages including R, Python, and SQL
 
 
 https://rmarkdown.rstudio.com/
@@ -103,27 +103,42 @@ See the [gallery](https://rmarkdown.rstudio.com/gallery.html)
 :::
 
 
-# 学这门课的价值?
+# 为什么学这门课?
 
-## R Markdown workflow
+## 传统工作流
+
+统计分析 → SPSS, SAS, Excel
+
+报告撰写 → Word
+
+啊！我发现统计分析时，用错资料了...→ 重复步骤 1, 2
+
+输出报告
+
+
+参考：https://yongfu.name/2019-fju-rmd-talk/slide/#25
+
+## R Markdown 工作流
 
 ![支持开源和学术透明、推动R Markdown中国化](images/workflow.png)
 
 ## 事半功倍
 
+R开源、免费
+
 简单易学：R很简单，配合tidyverse等系列包，代码可读性强
 
-All in one （鱼与熊掌，我全都要）：一个软件全都有，数据-分析-可视化-写作-展示（类似于家装全包）
+All in one (鱼与熊掌，我全都要)：一个软件全都有，数据-分析-可视化-写作-展示类(似于家装全)包一波流
 
-一个残酷的现实：用统计的，往往不是学统计的。
+一个残酷的现实：用统计的，往往不是学统计的
 
-  -   R语言做统计分析，是它的看家本领，非常好用！
+  -   R语言做统计分析，是它的看家本领，非常好用
 
-R的表格和可视化，是颜值担当，高大上，无出其右！
+R的表格和可视化，是颜值担当，高大上，无出其右
 
-不论写论文、写书、写报告、PPT，它都是让你脱颖而出的好工具！
+不论写论文、写书、写报告、PPT，它都是让你脱颖而出的好工具
 
-  -   更多期刊和作者都在使用R Markdown，学习R Markdown就是拥抱未来！
+  -   更多期刊和作者都在使用R Markdown，学习R Markdown就是拥抱未来
   
 ——参考王敏杰[《数据科学中的 R 语言》](https://bookdown.org/wangminjie/R4DS/)
 
@@ -133,7 +148,7 @@ R的表格和可视化，是颜值担当，高大上，无出其右！
 
 ## 适合谁？
 
--   科研工作者（拯救科研狗）
+-   科研工作者(拯救科研狗)
 
     -   理工农**医**
     -   社科
@@ -155,7 +170,7 @@ R的表格和可视化，是颜值担当，高大上，无出其右！
   
 编程基础
 
-  -   Python或R编程基础最佳，没有编程基础，也可。
+  -   Python或R编程基础最佳，没有编程基础，也可
   -   R markdown 与Jupyter notebook是亲兄弟
   
 统计学基础
@@ -164,7 +179,7 @@ R的表格和可视化，是颜值担当，高大上，无出其右！
   -   会看统计图表
   -   会点SPSS就OK
 
-本科程没有复杂的`公式`！
+本课程没有复杂的`公式`！
 
 
 # Examples
@@ -172,12 +187,14 @@ R的表格和可视化，是颜值担当，高大上，无出其右！
 ## Slide with R Output
 
 ```{r summary, echo = TRUE}
+# women数据集的总结
 summary(women)
 ```
 
 ## Slide with Plot
 
 ```{r plot}
+# fdeaths数据集作图
 plot(fdeaths)
 ```
 
@@ -205,7 +222,7 @@ plt.show()
 
 ## 课后作业
 
-尝试用我提供的ppt模板(template.pptx)生成pptx，可以替换头像，修改名字
+尝试用本课程的ppt模板(template.pptx)和Rmd文件生成pptx，可以替换头像，修改标题
 
 参考：[Rendering PowerPoint Presentations with RStudio](https://support.rstudio.com/hc/en-us/articles/360004672913-Rendering-PowerPoint-presentations-with-RStudio)
 

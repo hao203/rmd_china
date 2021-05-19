@@ -50,7 +50,7 @@ csl: nature.csl #设定style
 
 ## .bib文件
 
-.bib是用来存储文献的标准库文件，依照LaTeX格式（BibTeX）存储了文献的信息，如
+.bib是用来存储文献的标准库文件，依照LaTeX格式(BibTeX)存储了文献的信息，如
 
 ``` {.bibtex}
 @Book{ggplot2,
@@ -63,7 +63,7 @@ csl: nature.csl #设定style
   }
 ```
 
-几乎所有的学术期刊和学术搜索引擎（谷歌学术/百度学术）都支持.bib
+几乎所有的学术期刊和学术搜索引擎(谷歌学术/百度学术)都支持.bib
 
 ## 如何管理.bib
 
@@ -79,13 +79,13 @@ csl: nature.csl #设定style
 
 我更加推崇`Zotero`和`Jabref`，开源、免费，支持多平台
 
-## style设定（CSL）
+## style设定(CSL)
 
 CSL (Citation Style Language)是一种通用的设定style的语言
 
 我们可以在[Zotero Style Repository](https://www.zotero.org/styles)找到自己需要的style
 
-这个库拥有最全的style（截止目前10057）
+这个库拥有最全的style(截止目前10057)
 
 如果找不到自己需要的，还可以https://editor.citationstyles.org自己编辑
 
@@ -125,7 +125,7 @@ ggplot2为BibTex key，想要插入这条文献，只需输入`[@ggplot2]`，[@g
 
 ## 交叉引用的方法
 
-如果想引用文档内的图、表、章节等，可以采用交叉引用（Cross-referencing）
+如果想引用文档内的图、表、章节等，可以采用交叉引用(Cross-referencing)
 
 引用方法：
 
@@ -133,7 +133,7 @@ ggplot2为BibTex key，想要插入这条文献，只需输入`[@ggplot2]`，[@g
 -   `\@ref(tab:chunk-name)` \#引用表格
 -   `\@ref(label)` \#引用章节
 
-> 该方法只适用于bookdown输出（图表引用），在应用前，请安装bookdown包
+> 该方法只适用于bookdown输出(图表引用)，在应用前，请安装bookdown包
 
 ## 交叉引用举例-图表
 
@@ -155,7 +155,7 @@ plot(cars)
 
 方法一：`[文字][章节名称]` --- [参考文献放置位置](#参考文献放置位置)
 
-方法二：引用章节（位置），后面加入ID，即`{#id}` --- `[link text](#ID)`
+方法二：引用章节(位置)，后面加入ID，即`{#id}` --- `[link text](#ID)`
 
 我们在**\# 交叉引用** 这章后面加ID`{#example-section}`
 

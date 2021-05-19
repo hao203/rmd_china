@@ -31,7 +31,7 @@ R Markdown学术写作课程（医咖会），该课的主要目的是为提高�
 -   R Markdown - 官方称为R Markdown （同义词Rmarkdown、R markdown等）
 -   rmarkdown - 这个是R Markdown 的包名称，即需要安装rmarkdown package才能进行下一步的操作
 -   .Rmd - R Markdown文件扩展名，首字母大写
--   R包的名字 - 全部使用小写
+-   R包的名字 - 全部使用小写，如tidyverse、knitr...
 -   .Rmd代码块和命令行全部为小写字母 - 布尔值除外（TRUE,FALSE）
 -   .Rmd代码块符号前后必须有空格 - 如 a <- 2 , b = 3 .
 -   所有文件名称均为英文
@@ -106,7 +106,7 @@ R Markdown学术写作课程（医咖会），该课的主要目的是为提高�
    - 写一个完整的manuscript
    - 关于rticles包
    - 写一个post（postdown包）
-   - 写一本书，以[R Markdown Cookbook](https://github.com/yihui/rmarkdown-cookbook)这本开元书籍为例
+   - 写一本书，以[R Markdown Cookbook](https://github.com/yihui/rmarkdown-cookbook)这本开源书籍为例
    - 写一个学术简历（vitae包）
 2. 结语
    - 我的一些理念

@@ -64,15 +64,15 @@ Markdown非常容易上手，几分钟就可完成学习。排版精美，尤其
 
 ![Rstudio自带的Markdown参考文档](images/md_help.png){width=80%}
 
-# 代码块（Code Chunks）
+# 代码块(Code Chunks)
 
 ## Code Chunks是R Markdown的灵魂
 
-R Markdown的Code Chunks（代码块）是可以执行的，这就让数据分析可以在文档中执行，并按照自己的意愿进行控制
+R Markdown的Code Chunks(代码块)是可以执行的，这就让数据分析可以在文档中执行，并按照自己的意愿进行控制
 
 Chunks可以是R代码，也可以是其他语言，如Python
 
-代码块```` ```{语言名称} ````开头，```` ``` ````结尾。
+代码块```` ```{语言名称} ````开头，```` ``` ````结尾
 
 插入Chunk快捷键为Ctrl + Alt + I (OS X: Cmd + Option + I)
 
@@ -84,7 +84,7 @@ print ("a code chunk")
 
 ## Chunk和block的区别
 
-Markdown代码块（code block）为纯文本，无法执行
+Markdown代码区块(code block)为纯文本，无法执行
 
 ````md
 ```r  
@@ -100,7 +100,7 @@ print("This will be printed!")
 ```  
 ````
 
-代码还有一种inline方式（行内执行）
+代码还有一种inline方式(行内执行)
 
 ````md
 There are `r knitr::inline_expr('nrow(iris)')` observations in the **iris** dataset.
@@ -109,7 +109,7 @@ There are `r knitr::inline_expr('nrow(iris)')` observations in the **iris** data
 There are `r nrow(iris)` observations in the **iris** dataset.
 
 
-## Chunk output options
+## 代码块设定Chunk output options
 
 ```{r}
 data.frame(
@@ -123,7 +123,7 @@ data.frame(
   "caption",
   "fig.cap"
 ),  
-  Code = c(
+  Detail = c(
   "输出结果？",
    "显示代码？",
    "输出代码和结果？",
