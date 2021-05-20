@@ -26,7 +26,7 @@ header-includes:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE) 
 
 ```
 
@@ -36,11 +36,11 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 参考文献是学术写作必备的模块
 
-任何参考文献管理工具，操作流程都是四个步骤
+任何参考文献管理工具/软件，操作流程都是四个步骤
 
 -   **建库-导入文献-插入文献-设定style**
 
-YAML header首先要设定好库和style
+YAML header首先要设定好库和参考文献样式(style)
 
 ``` {.yaml}
 bibliography: ref.bib #设定库
@@ -83,11 +83,9 @@ csl: nature.csl #设定style
 
 CSL (Citation Style Language)是一种通用的设定style的语言
 
-我们可以在[Zotero Style Repository](https://www.zotero.org/styles)找到自己需要的style
+我们可以在[Zotero Style Repository](https://www.zotero.org/styles)找到自己需要的style，这个库拥有最全的style(截止目前10057)
 
-这个库拥有最全的style(截止目前10057)
-
-如果找不到自己需要的，还可以https://editor.citationstyles.org自己编辑
+如果找不到自己需要的style，还可在https://editor.citationstyles.org自己编辑
 
 ## 插入引用
 
@@ -120,6 +118,9 @@ ggplot2为BibTex key，想要插入这条文献，只需输入`[@ggplot2]`，[@g
 
 [参考文献位置][参考文献列表放这里]
     
+## 参考文献列表在此
+
+<div id="refs"></div>
 
 # 交叉引用 {#example-section}
 
@@ -140,7 +141,7 @@ ggplot2为BibTex key，想要插入这条文献，只需输入`[@ggplot2]`，[@g
 YAML设定
 
 ``` {.yaml}
-bookdown::pdf_document2: default
+bookdown::pdf_document2: default 
 ```
 
 cars数据集散点图 \@ref(fig:cars-plot)
@@ -151,7 +152,7 @@ cars数据集散点图 \@ref(fig:cars-plot)
 plot(cars)
 ```
 
-## 交叉引用具体-章节
+## 交叉引用举例-章节
 
 方法一：`[文字][章节名称]` --- [参考文献放置位置](#参考文献放置位置)
 
@@ -178,11 +179,6 @@ plot(cars)
 
 除管理.bib外，还可以和Zotero配合，甚至直接从pubmed导入文献
 
-# 参考列表
-
-## 参考文献列表放这里
-
-<div id="refs"></div>
 
 # 课后作业
 

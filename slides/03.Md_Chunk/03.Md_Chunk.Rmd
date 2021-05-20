@@ -103,10 +103,10 @@ print("This will be printed!")
 代码还有一种inline方式(行内执行)
 
 ````md
-There are `r knitr::inline_expr('nrow(iris)')` observations in the **iris** dataset.
+There are `r knitr::inline_expr('nrow(iris)')` observations in the iris dataset.
 ````
 
-There are `r nrow(iris)` observations in the **iris** dataset.
+There are `r nrow(iris)` observations in the __iris__ dataset.
 
 
 ## 代码块设定Chunk output options

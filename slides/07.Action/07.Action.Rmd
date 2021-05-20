@@ -48,7 +48,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 2. 加上目录
 3. 给章节加上序号
 4. 参考文献style选用jama
-5. 加入一个表格（gtsummary），来比较死亡和存活组的麻雀在sex，totlen，head，wgt方面的差异
+5. 加入一个表格(gtsummary)，来比较死亡和存活组的麻雀在sex，totlen，head，wgt方面的差异
 
 
 # Book

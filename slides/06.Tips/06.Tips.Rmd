@@ -3,12 +3,6 @@ title: "06.技巧和建议"
 author: "梁昊"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  powerpoint_presentation:
-    reference_doc: ../00.Introduction/template.pptx
-    toc: yes
-    toc_depth: 1
-    number_sections: no
-    slide_level: 2
   beamer_presentation:
     theme: CambridgeUS
     toc: yes
@@ -16,6 +10,12 @@ output:
     number_sections: yes
     latex_engine: xelatex
     colortheme: seahorse
+  powerpoint_presentation:
+    reference_doc: ../00.Introduction/template.pptx
+    toc: yes
+    toc_depth: 1
+    number_sections: no
+    slide_level: 2
   bookdown::pdf_document2: default
   pdf_document: default
 indent: yes
@@ -68,6 +68,23 @@ linkcolor: black
 fontsize: 12pt
 
 ```
+
+## 代码样式
+
+R也有代码规范，遵循规范意味着好的编程习惯，让你代码读起来更流畅、更简洁。
+
+参考：[R代码风格规范](https://www.jianshu.com/p/40cb671c4121)
+
+我特意强调2条：
+
+  - 用'<-'赋值，而不是'=' (快捷键Alt+-，这是我最常用的快捷键)
+  - 用'%>%'(管道操作)让你代码更易读、易写
+  
+R代码规范相关的包
+
+  - `styler`包：styler包可以自动将代码转换成符合规定的代码形式。装好后，Rstudio的插件中可以找到。适合已经完成的代码一键转换
+  - `lintr`包：同样可以使用插件(Addins )来自动规范代码
+
 
 
 # pdf中文支持
