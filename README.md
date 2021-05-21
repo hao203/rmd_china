@@ -2,7 +2,7 @@
 
 ## 为什么要学R Markdown? 我给你10个理由
 
-Rmarkdown学术写作的优势一句话：all in one。
+R Markdown学术写作的优势一句话：all in one。
 
 1个Rstudio可以把学术写作的所有要素全部集中，不需要额外的软件。一个R Markdown文件，一个完整的workflow，完全复现你写作中的方方面面。从数据清洗、分析、写作、发表一条龙服务。
 
