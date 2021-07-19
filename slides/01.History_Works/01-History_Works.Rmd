@@ -3,14 +3,6 @@ title: "01-R Markdown历史和工作原理"
 author: "梁昊"
 date: "02/04/2021"
 output:
-  beamer_presentation: 
-    theme: CambridgeUS
-    toc: yes
-    slide_level: 2
-    number_sections: yes
-    highlight: tango
-    pandoc_args: --listings
-    latex_engine: xelatex
   pdf_document: 
     latex_engine: xelatex
     pandoc_args: --listings
@@ -20,6 +12,14 @@ output:
     toc_depth: 1
     number_sections: no
     slide_level: 2
+  beamer_presentation: 
+    theme: CambridgeUS
+    toc: yes
+    slide_level: 2
+    number_sections: yes
+    highlight: tango
+    pandoc_args: --listings
+    latex_engine: xelatex
 header-includes:
   - \usepackage{ctex}
   - \lstset{breaklines=true}
@@ -90,9 +90,9 @@ pdf格式的输出需要TeX，TeX Live、MiKTeX等(~5Gb大小)TeX工具包的安
 ```{r install, eval=FALSE, echo=TRUE, warning=FALSE}
 install.packages('rmarkdown')
 install.packages('tinytex')
-tinytex::tlmgr_repo('https://mirrors.tuna.tsinghua.edu.cn/CTAN/') #国内镜像
 tinytex::install_tinytex()  # install TinyTeX
 tinytex::is_tinytex() # 安装成功返回TRUE，必须检测
+tinytex::tlmgr_repo('https://mirrors.tuna.tsinghua.edu.cn/CTAN/') #国内镜像
 
 ```
 

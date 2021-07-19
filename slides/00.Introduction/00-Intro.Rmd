@@ -3,26 +3,24 @@ title: "00-R Markdown学术写作热身"
 author: "梁昊"
 date: "06/03/2021"
 output:
-  beamer_presentation:
-    latex_engine: xelatex
-    theme: "AnnArbor"
-    toc: yes
-    slide_level: 2
   powerpoint_presentation:
     reference_doc: template.pptx
     toc: yes
     toc_depth: 1
     number_sections: no
     slide_level: 2
-  ioslides_presentation: default
-  slidy_presentation: default
+  beamer_presentation:
+    latex_engine: xelatex
+    theme: "AnnArbor"
+    toc: yes
+    slide_level: 2
 header-includes:
   - \usepackage{ctex}
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-library(magrittr)
+library(reticulate)
 ```
 
 # 个人介绍
@@ -107,13 +105,13 @@ See the [gallery](https://rmarkdown.rstudio.com/gallery.html)
 
 ## 传统工作流
 
-统计分析 → SPSS, SAS, Excel
+1. 统计分析 → SPSS, SAS, Excel
 
-报告撰写 → Word
+2. 报告撰写 → Word
 
-啊！我发现统计分析时，用错资料了...→ 重复步骤 1, 2
+3. 啊！我发现统计分析时，用错资料了...→重复步骤 1, 2
 
-输出报告
+4. 输出报告
 
 
 参考：https://yongfu.name/2019-fju-rmd-talk/slide/#25
@@ -201,8 +199,7 @@ plot(fdeaths)
 ## Slide with Table
 
 ```{r table}
-head(iris) %>% 
-  knitr::kable()
+knitr::kable(head(iris))
 ```
 
 ## python code

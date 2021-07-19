@@ -15,7 +15,7 @@ R Markdown学术写作的优势一句话：all in one。
 7.	支持输出几乎所有主流的格式，包括html/pdf/docx/pptx/md等。
 8.	适应任何写作目的：manuscript、book、presentation、blog、CV、post。
 9.	更好的协作性。自带git模块，版本管理，团队协作游刃有余。
-10.	几行代码自动生成美观的表格，Table one 和OR可以通过相应的包自动测算并输出。
+10.	几行代码自动生成美观的表格，Table 1 和OR可以通过相应的包自动测算并输出。
 
 
 ### 介绍

@@ -139,6 +139,21 @@ output:
 
 > https://rmarkdown.rstudio.com/formats.html
 
+## 更多设定
+
+YAML metadata for R Markdown with examples
+
+https://github.com/hao203/rmarkdown-YAML
+
+
+我对R Markdown 的YAML metadata 进行设置和掌握而创建的项目
+
+未来打算：
+
+1. 单独出教程
+2. 邀请更多大牛加入
+
+
 # ymlthis package
 
 ## ymlthis 包简介
