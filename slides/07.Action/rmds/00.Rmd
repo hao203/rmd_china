@@ -1,0 +1,205 @@
+
+
+# 00-R Markdown学术写作热
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+## 个人介绍
+
+### 基本情况
+
+::: {.columns}
+::: {.column width="40%"}
+![个人头像](images/avatar.jpg)
+:::
+
+::: {.column width="60%"}
+-   梁昊
+
+    -   出生年月：1986.12
+
+    -   职称：讲师/主治医师
+
+    -   学位：医学博士
+
+    -   毕业院校：湖南中医药大学
+
+    -   工作单位：湖南中医药大学
+
+    -   研究方向：中医诊断学/医学AI
+    
+    -   项目主页：https://gitee.com/hao203
+:::
+:::
+
+## 学术兼职及成果
+
+-   学术兼职
+    -   中国中西医结合学会诊断专业委员会青年委员
+    -   中国中医药信息学会中医诊断信息分会理事
+    -   湘雅医学期刊社青年编委
+    -   《湖南中医药大学学报》编委
+
+-   主持国家级课题1项、省部级课题2项、厅级课题2项；以第一作者及通讯作者发表论文20余篇，其中SCI 4篇，CSCD 10篇，总被引200余次
+
+-   获省级教学成果奖1项，湖南省中医药科技一等奖2项
+
+# R Markdown是什么?
+
+## R Markdown
+
+R Markdown是利用Rstudio进行科技写作的全能选手
+
+  -   本课程专注于学术写作  
+  
+R Markdown的文档能够完全重现
+
+  -   R Markdown documents are fully reproducible
+  
+可以把文本+代码优雅的输出成你需要的格式
+
+  -   Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output
+
+支持多种程序语言，包括R，python，SQL等
+
+-   Use multiple languages including R, Python, and SQL
+
+
+https://rmarkdown.rstudio.com/
+
+## Output any format
+
+::: {.columns}
+::: {.column}
+![output](images/outputformats.png)
+:::
+
+::: {.column}
+R Markdown supports dozens of static and dynamic output formats including HTML, PDF, MS Word, Beamer, HTML5 slides, Tufte-style handouts, books, dashboards, shiny applications, scientific articles, websites, and more.
+
+See the [gallery](https://rmarkdown.rstudio.com/gallery.html)
+:::
+:::
+
+
+# 为什么学这门课?
+
+## 传统工作流
+
+1. 统计分析 → SPSS, SAS, Excel
+
+2. 报告撰写 → Word
+
+3. 啊！我发现统计分析时，用错资料了...→重复步骤 1, 2
+
+4. 输出报告
+
+
+参考：https://yongfu.name/2019-fju-rmd-talk/slide/#25
+
+## R Markdown 工作流
+
+![支持开源和学术透明、推动R Markdown中国化](images/workflow.png)
+
+## 事半功倍
+
+R开源、免费
+
+简单易学：R很简单，配合tidyverse等系列包，代码可读性强
+
+All in one (鱼与熊掌，我全都要)：一个软件全都有，数据-分析-可视化-写作-展示类(似于家装全)包一波流
+
+一个残酷的现实：用统计的，往往不是学统计的
+
+  -   R语言做统计分析，是它的看家本领，非常好用
+
+R的表格和可视化，是颜值担当，高大上，无出其右
+
+不论写论文、写书、写报告、PPT，它都是让你脱颖而出的好工具
+
+  -   更多期刊和作者都在使用R Markdown，学习R Markdown就是拥抱未来
+  
+——参考王敏杰[《数据科学中的 R 语言》](https://bookdown.org/wangminjie/R4DS/)
+
+
+# 这门课适合谁?
+
+
+## 适合谁？
+
+-   科研工作者(拯救科研狗)
+
+    -   理工农**医**
+    -   社科
+    -   心理
+    -   商业
+    -   经济
+
+-   研究生(同理，各学科)
+
+-   数据科学
+
+
+
+# 需要哪些基础?
+
+英语基础
+
+  -   有点英语基础，能看懂基本单词
+  
+编程基础
+
+  -   Python或R编程基础最佳，没有编程基础，也可
+  -   R markdown 与Jupyter notebook是亲兄弟
+  
+统计学基础
+
+  -   懂基本的统计学原理，和统计学方法的适用对象
+  -   会看统计图表
+  -   会点SPSS就OK
+
+本课程没有复杂的`公式`！
+
+
+# Examples
+
+## Slide with R Output
+
+```{r summary, echo = TRUE}
+# women数据集的总结
+summary(women)
+```
+
+## Slide with Plot
+
+```{r plot}
+# fdeaths数据集作图
+plot(fdeaths)
+```
+
+## Slide with Table
+
+```{r table}
+knitr::kable(head(iris))
+```
+
+
+# 课后作业
+
+## 课后作业
+
+尝试用本课程的ppt模板(template.pptx)和Rmd文件生成pptx，可以替换头像，修改标题
+
+参考：[Rendering PowerPoint Presentations with RStudio](https://support.rstudio.com/hc/en-us/articles/360004672913-Rendering-PowerPoint-presentations-with-RStudio)
+
+
+R Markdown 推荐书籍(全部开源免费,也是本课程主要参考书)
+  
+  -   [R 数据分析指南与速查手册](https://bookdown.org/xiao/RAnalysisBook/)
+  -   [数据科学中的 R 语言](https://bookdown.org/wangminjie/R4DS/)
+  -   [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+  -   [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+
+

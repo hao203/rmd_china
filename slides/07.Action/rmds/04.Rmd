@@ -1,37 +1,8 @@
----
-title: "04.图片和表格"
-author: "梁昊"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-output:
-  powerpoint_presentation:
-    reference_doc: ../00.Introduction/template.pptx
-    toc: yes
-    toc_depth: 1
-    number_sections: no
-    slide_level: 2
-  beamer_presentation:
-    theme: CambridgeUS
-    toc: yes
-    slide_level: 2
-    number_sections: yes
-    pandoc_args: --listings
-    latex_engine: xelatex
-    colortheme: seahorse
-  pdf_document:
-    latex_engine: xelatex
-    pandoc_args: --listings
-header-includes:
-- \usepackage{ctex}
-- \lstset{breaklines=true}
----
+# 04.图片和表格
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-library(tidyverse)
-```
-# 图片(Figures)
+## 图片(Figures)
 
-## 外部图片
+### 外部图片
 
 直接用Markdown
 
@@ -82,6 +53,7 @@ R Markdown的表格输出非常强大，可以根据需求使用不同的包实�
 ## 表格常用的R包
 
 ```{r}
+library(magrittr)
 data.frame(
   名称 = c(
   "gtsummary",
@@ -171,9 +143,9 @@ gtsummary包是Table 1 的首选
 
 gtsummary包支持多个表格包，对flextable包支持度最好
 
-```{r echo=TRUE}
-# 加载必要的包
-pacman::p_load(gtsummary, kableExtra, flextable, readr, magrittr)
+```{r include=FALSE}
+library(pacman)
+p_load(gtsummary, kableExtra, flextable, readr, magrittr)
 ```
 
 ## Example

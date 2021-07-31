@@ -1,31 +1,8 @@
----
-title: "05.参考文献和引用"
-author: "梁昊"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-output:
-  bookdown::pdf_document2: default
-  powerpoint_presentation:
-    reference_doc: ../00.Introduction/template.pptx
-    toc: yes
-    toc_depth: 1
-    number_sections: no
-    slide_level: 2
+# 05.参考文献和引用
 
-bibliography: ref.bib
-csl: nature.csl
-link-citations: yes
-header-includes:
-- \usepackage{ctex}
----
+## 参考文献
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE) 
-
-```
-
-# 参考文献
-
-## 基本设定
+### 基本设定
 
 参考文献是学术写作必备的模块
 

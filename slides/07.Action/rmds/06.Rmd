@@ -1,33 +1,9 @@
----
-title: "06.技巧和建议"
-author: "梁昊"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-output:
-  bookdown::pdf_document2:
-    toc: yes
-    number_sections: yes
-  pdf_document: default
-  powerpoint_presentation:
-    reference_doc: ../00.Introduction/template.pptx
-    toc: yes
-    toc_depth: 1
-    number_sections: no
-    slide_level: 2
-indent: yes
-header-includes:
-- \usepackage{ctex}
-- \usepackage{lineno}
-- \linenumbers
----
+# 06.技巧和建议
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
-```
+## 模板和样式
 
-# 模板和样式
-
-## 模板
+### 模板
 
 所有的输出样式都可以有模板，本课程所有的ppt也都是通过医咖会模板自动生成
 
@@ -135,9 +111,6 @@ output:
 ```{r child = 'Chapter_2.Rmd'} `r ''`
 ```
 ````
-
-```{r child = 'Chapter_1.Rmd'} 
-```
 
 ## bookdown 新建图书
 

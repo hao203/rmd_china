@@ -1,38 +1,8 @@
----
-title: "07.实战"
-author: "梁昊"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-output:
-  powerpoint_presentation:
-    reference_doc: ../00.Introduction/template.pptx
-    toc: yes
-    toc_depth: 1
-    number_sections: no
-    slide_level: 2
-  beamer_presentation:
-    theme: CambridgeUS
-    toc: yes
-    slide_level: 2
-    number_sections: yes
-    latex_engine: xelatex
-    colortheme: seahorse
-  bookdown::pdf_document2: default
-  pdf_document: default
-indent: yes
-header-includes:
-- \usepackage{ctex}
-- \usepackage{lineno}
-- \linenumbers
----
+# 07.实战
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+## Manuscript
 
-```
-
-# Manuscript
-
-## 素材
+### 素材
 
 题目：High sparrow body length decreases survival
 
