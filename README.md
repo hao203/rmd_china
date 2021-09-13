@@ -106,7 +106,7 @@ R Markdown学术写作课程（医咖会），该课的主要目的是为提高�
    - 写一个完整的manuscript
    - 关于rticles包
    - 写一个post（postdown包）
-   - 写一本书，以[R Markdown Cookbook](https://github.com/yihui/rmarkdown-cookbook)这本开源书籍为例
+   - 写一本书，以[ElegantBookdown: A bookdown wrapper for ElegantBook ](https://github.com/XiangyunHuang/ElegantBookdown)这本开源书籍为例
    - 写一个学术简历（vitae包）
 2. 结语
    - 我的一些理念
