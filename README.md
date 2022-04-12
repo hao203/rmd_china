@@ -1,5 +1,7 @@
 # R Markdown学术写作教程
 
+完整视频教程已发表在医咖会[R Markdown学术写作系列教程](https://www.mediecogroup.com/zhuanlan/courses/46/)
+
 ## 为什么要学R Markdown? 我给你10个理由
 
 R Markdown学术写作的优势一句话：all in one。
